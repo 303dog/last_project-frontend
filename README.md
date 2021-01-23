@@ -1,3 +1,70 @@
+# Read me
+
+This is a fun application that allows you to compare all the superheros from Marvel & DC.  
+
+User will be able to build a superhero team-
+-Research heros <--API
+-Add comments on heros
+-hero has image
+-rate heros
+-have favorites
+-compare different heros baised on stats
+-add personal hero?
+-add image?
+-remove hero
+-score based on hero stats
+-teams will have accumlative score based on heros
+-challenge other teams?
+
+MODELS
+
+*USER:
+
+    Attributes-
+        name
+        username
+        password
+            has_many "heros"
+
+
+*HEROS:
+
+    Attributes-
+        id
+        biography
+        powerstats
+        appearance
+        work
+        connections
+        images
+        search name
+            belongs_to "Marvel" "DC"
+            belongs_to "users team"
+
+*TEAMS:
+
+    Attributes-
+        team name
+            has_many "heros"
+            belongs_to "user"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
