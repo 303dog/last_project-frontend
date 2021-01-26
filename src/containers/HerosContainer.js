@@ -13,11 +13,10 @@ class HerosContainer extends Component {
 
   componentDidMount() {
     const fetchHeros = () => {
-      fetch("https://localhost:3000/users")
+     return fetch('http://localhost:3001/api/v1/heros')
         .then((res) => res.json())
         .then((data) => {
           const heros = data;
-
           this.setState({ heros });
 
           console.log(this.state);
@@ -30,8 +29,12 @@ class HerosContainer extends Component {
     return this.state.heros.map((hero) => {
       return (
         <>
+          <h2>Heros</h2>
+          <h2>{hero.aka}</h2>
           <h3>{hero.name}</h3>
-          <img src={hero.images.lg} />
+          <h2>{hero.alignment}</h2>
+          <img src={hero.smImg} alt="hero" />
+         
         </>
       );
     });
@@ -40,7 +43,7 @@ class HerosContainer extends Component {
   render() {
     return (
       <>
-        <div className="container">{this.renderHeros()}</div>
+        <div className="container">{this.renderHeros()}Render()</div>
       </>
     );
   }
