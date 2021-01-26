@@ -21,32 +21,41 @@ MODELS
 *USER:
 
     Attributes-
-        name
-        username
-        password
-            has_many "heros"
+        -name
+        -username
+        -password
+            -has_many "heros"
 
 
 *HEROS:
 
     Attributes-
-        id
-        biography
-        powerstats
-        appearance
-        work
-        connections
-        images
-        search name
-            belongs_to "Marvel" "DC"
-            belongs_to "users team"
+        -id
+        -biography
+        -powerstats
+        -appearance
+        -work 
+        -connections
+        -images
+        -search name
+          //  -belongs_to "users" through "teams"
 
 *TEAMS:
 
     Attributes-
-        team name
-            has_many "heros"
-            belongs_to "user"
+        -team name
+        -scoreboard
+            -has_many "heros"
+            -belongs_to "user"
+
+*Comments:
+
+    Attributes-
+        -title
+        -content
+            -belongs_to "hero" through "user"
+            
+        
 
 
 

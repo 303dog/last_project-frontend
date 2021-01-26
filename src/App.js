@@ -1,13 +1,8 @@
-import React from 'react';
+import HerosContainer from './containers/HerosContainer';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        App
-    </div>
-  );
-}
+function App() {
+  return <HerosContainer />;
+
 }
 
 export default App;
